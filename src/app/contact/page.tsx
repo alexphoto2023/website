@@ -14,7 +14,7 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/Button'
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/Card'
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Container } from '@/components/ui/Container'
 import { Phone, Map, Mail } from 'lucide-react'
 import { Textarea } from '@/components/ui/textarea'

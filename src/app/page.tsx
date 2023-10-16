@@ -2,9 +2,6 @@ import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 
-import background from '@/images/background.png'
-import { Button } from '@/components/ui/Button'
-import { Card } from '@/components/ui/Card'
 import { Container } from '@/components/ui/Container'
 import {
   InstagramIcon,
