@@ -11,7 +11,7 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/ui/SocialIcons'
-import portraitImage from '@/images/cv.jpg'
+import portraitImage from '@/images/image.jpg'
 import { type Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About Me',
