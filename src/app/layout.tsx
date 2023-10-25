@@ -4,19 +4,6 @@ import { Layout } from '@/components/ui/Layout'
 
 import '@/styles/tailwind.css'
 
-export const metadata: Metadata = {
-  title: {
-    template: '%s - John Doe',
-    default: 'John Doe - Professional photographer',
-  },
-  description: 'I’m Joe, this is description of my website.',
-  alternates: {
-    types: {
-      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
-    },
-  },
-}
-
 export default function RootLayout({
   children,
 }: {

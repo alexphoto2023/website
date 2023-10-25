@@ -23,6 +23,7 @@ module.exports = {
         '2sm': '420px',
         '1050px': '1050px',
         '800px': '800px',
+        '400px': '400px',
       },
       colors: {
         border: 'hsl(var(--border))',

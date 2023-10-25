@@ -1,17 +1,23 @@
-import { type Metadata } from 'next'
+/* eslint-disable react/no-unescaped-entities */
+
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/ui/Container'
 import {
-  FacebookIcon,
+  BehanceIcon,
   InstagramIcon,
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/ui/SocialIcons'
-import portraitImage from '@/images/portrait.jpg'
-
+import portraitImage from '@/images/image.jpg'
+import { type Metadata } from 'next'
+export const metadata: Metadata = {
+  title: 'About Me',
+  description:
+    'As a photographer, my goal is to freeze time and create lasting memories.',
+}
 function SocialLink({
   className,
   href,
@@ -47,11 +53,6 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'About',
-  description: 'I’m John Doe.',
-}
-
 export default function About() {
   return (
     <Container className="mt-16 sm:mt-32">
@@ -68,63 +69,52 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            I’m John Doe. Lorem ipsum dolor sit amet, consectetur adipiscing.
+            Hey there! I'm Alex
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-              odio sed ipsum malesuada vestibulum. Nulla finibus turpis est, non
-              sagittis tellus interdum quis. Donec tincidunt est leo. Etiam
-              scelerisque purus eu odio malesuada, sed tristique quam maximus.
+              Hey there! I'm Alex, and I have a passion for photography and all
+              things creative. I believe in the magic of capturing moments that
+              tell stories and express emotions through the lens.
             </p>
             <p>
-              Donec eros odio, condimentum non pulvinar at, congue id nibh.
-              Proin facilisis, risus ut lobortis laoreet, tellus velit fringilla
-              odio, at commodo erat nisl quis nulla. Nulla sed placerat tellus.
-              Donec mollis laoreet nulla vitae elementum. Sed eu lectus lectus.
-              Phasellus pretium, ante eget scelerisque hendrerit, purus ex
-              porttitor leo, a fringilla quam odio ut quam.
+              As a photographer, my goal is to freeze time and create lasting
+              memories. Whether it's a portrait, a landscape, or any special
+              moment, I strive to capture the beauty and authenticity in every
+              shot.
             </p>
             <p>
-              Cras in leo congue, volutpat neque eget, vehicula sem. Curabitur
-              sit amet massa suscipit, iaculis dolor tristique, rhoncus nisi.
-              Nullam ultricies augue mauris, vitae aliquet augue pretium nec.
-              Suspendisse potenti. Quisque imperdiet finibus ullamcorper.
-              Quisque a ultricies nisl. Sed imperdiet nisl sit amet fermentum
-              bibendum. Donec libero turpis, vestibulum quis sodales sit amet,
-              condimentum in sem. Proin eget felis quis nibh aliquam convallis.
-              Proin dapibus arcu libero, sit amet rhoncus sem mollis ut. In vel
-              porta arcu.
+              Apart from my love for photography, I'm also enthusiastic about
+              graphic animations and design. It's not just a profession for me;
+              it's a hobby I like. The world of visuals fascinates me, and I
+              enjoy exploring its endless possibilities.
             </p>
-            <p>
-              Mauris vitae vestibulum diam. Donec imperdiet dolor libero, in
-              ornare dui ullamcorper sed. Duis et leo vulputate, mattis elit
-              vitae, dapibus neque. Fusce viverra libero in feugiat vestibulum.
-              Morbi sapien diam, dictum id dignissim vel, posuere elementum
-              ligula. Nam aliquam lectus at suscipit ornare.
-            </p>
+
+            <p>Let's create beautiful memories together!</p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={TwitterIcon}>
-              Follow on Twitter
-            </SocialLink>
-            <SocialLink href="#" icon={InstagramIcon} className="mt-4">
+            <SocialLink
+              href="https://www.instagram.com/notradice"
+              icon={InstagramIcon}
+              className="mt-4"
+            >
               Follow on Instagram
             </SocialLink>
-            <SocialLink href="#" icon={FacebookIcon} className="mt-4">
-              Follow on Facebook
-            </SocialLink>
-            <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
-              Follow on LinkedIn
+            <SocialLink
+              href="https://www.behance.net/alexseychumakov"
+              icon={BehanceIcon}
+              className="mt-4"
+            >
+              Follow on Behance
             </SocialLink>
             <SocialLink
-              href="mailto:hey@hey.hey"
+              href="mailto:alexseychumakovphoto@gmail.com"
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              johndoe@gmail.com
+              alexseychumakovphoto@gmail.com
             </SocialLink>
           </ul>
         </div>

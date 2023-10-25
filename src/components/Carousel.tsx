@@ -9,55 +9,25 @@ import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 
 const rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-const array = [
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-].map((image, imageIndex) => (
-  // <div
-  //   key={image.src}
-  //   className={clsx(
-  //     'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
-  //     rotations[imageIndex % rotations.length],
-  //   )}
-  // >
-  //   <Image
-  //     src={image}
-  //     alt=""
-  //     sizes="(min-width: 640px) 18rem, 11rem"
-  //     className="absolute inset-0 h-full w-full object-cover"
-  //   />
-  // </div>
-  <div key={imageIndex}>her</div>
-))
-
+const numbers = Array.from({ length: 5 }, (_, i) => i + 1)
+console.log(numbers)
 export default function Carousel() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+        {numbers.map((number) => (
           <div
-            key={image.src}
+            key={number}
             className={clsx(
               'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
-              rotations[imageIndex % rotations.length],
+              rotations[number % rotations.length],
             )}
           >
             <Image
-              src={image}
+              src={`/${number}.png`}
               alt=""
+              layout="fill"
+              objectFit="cover"
               sizes="(min-width: 640px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
             />
